@@ -18,12 +18,21 @@ header {
   align-items: center;
 }
 
-header > img {
+.profile {
+  margin-top: 40px;
   width: 6em;
   height: 100px;
   border-radius: 100%;
   border: 5px solid #b2c8df;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
 }
+
+.flip-profile {
+  transform: translateX(-95%) rotateY(-180deg);
+}
+
 header > h1 {
   display: inline-block;
   color: #f9f2ed;
@@ -45,9 +54,11 @@ ul > li {
   border-radius: 10em;
   padding: 1em;
   margin: 1.4em 0;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-ul > li > a {
+.button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -58,4 +69,19 @@ ul > li > a {
 a {
   color: black;
   text-decoration: none;
+}
+
+.profile {
+}
+
+@media (max-width: 480px) {
+  ul > li {
+    width: 250px;
+  }
+}
+
+@media (max-width: 820px) {
+  ul > li {
+    width: 70%;
+  }
 }
